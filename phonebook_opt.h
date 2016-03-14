@@ -5,10 +5,11 @@
 
 /* TODO: After modifying the original version, uncomment the following
  * line to set OPT properly */
-// #define OPT 1
-typedef struct detail
+#define OPT 1
+
+typedef struct detail 
 {
-    char firstName[16];
+     char firstName[16];
     char email[16];
     char phone[10];
     char cell[10];
@@ -20,11 +21,13 @@ typedef struct detail
 }info;
 typedef struct __PHONE_BOOK_ENTRY {
     char lastName[MAX_LAST_NAME_SIZE];
-    struct  info *detail;
     struct __PHONE_BOOK_ENTRY *pNext;
+    struct __PHONE_BOOK_ENTRY *pChild;
+     struct __PHONE_BOOK_ENTRY *pLength;
+    struct info *detail;
 } entry;
 
-entry *findName(char lastname[], entry *pHead);
+entry *findName(char lastName[], entry *pHead);
 entry *append(char lastName[], entry *e);
 
 #endif

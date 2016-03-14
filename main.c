@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include <assert.h>
-
+#include "phonebook_opt.h"
 #include IMPL
 
 #define DICT_FILE "./dictionary/words.txt"
